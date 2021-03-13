@@ -1,0 +1,11 @@
+a.nav-link img {
+    width: 36px;
+    height: auto;
+}
+.custom-dropdown-size{
+    max-width: 150px;
+    min-width: 150px;
+}
+.dropdown-item{
+    text-align: center;
+}
