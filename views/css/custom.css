@@ -1,3 +1,7 @@
+.wrapper {
+    min-width: 100%;
+}
+
 a.nav-link img {
     width: 36px;
     height: auto;
@@ -8,4 +12,23 @@ a.nav-link img {
 }
 .dropdown-item{
     text-align: center;
+}
+.login-logo img{
+    width: 100px;
+    height: 100px;
+}
+.login-page, .register-page {
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0,30,50,1));
+}
+.login-page #back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../dist/img/photo1.png);
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
 }

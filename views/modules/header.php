@@ -17,11 +17,11 @@
                 <i class="fas fa-user-shield"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right custom-dropdown-size">
-                <a href="#" class="dropdown-item">
+                <a href="logout" class="dropdown-item">
                     <i class="fas fa-sign-out-alt"></i> Log Out
                 </a>
-                <div class="dropdown-divider"></div> 
-                
+                <div class="dropdown-divider"></div>
+
 
             </div>
         </li>

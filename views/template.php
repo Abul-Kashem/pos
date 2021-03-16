@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +12,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>POS</title>
+    <link rel="shortcut icon" href="views/dist/img/template/favicon-pos.ico" type="image/x-icon">
+
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -25,9 +32,15 @@
     <script src="views/dist/js/adminlte.js"></script>
 </head>
 
-<body class="hold-transition sidebar-mini">
-    <div class="wrapper">
-        <?php
+
+
+
+<body class="hold-transition sidebar-mini login-page">
+    <?php
+    if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == "ok") {
+
+        echo '<div class="wrapper">';
+
         include "modules/header.php";
         include "modules/sidebar.php";
 
@@ -44,12 +57,21 @@
                 $_GET["route"] == 'logout'
             ) {
                 include "modules/" . $_GET["route"] . ".php";
+            } else {
+                include "modules/404.php";
             }
         }
+
         include "modules/footer.php";
 
-        ?>
-    </div>
+        echo '</div>';
+    } else {
+        include "modules/login.php";
+    }
+
+    ?>
+
+
     <!-- ./wrapper -->
 </body>
 
